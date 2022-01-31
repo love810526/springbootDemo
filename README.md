@@ -12,5 +12,5 @@ Spring boot Practice
    3. Language : JAVA
    4. Packaging : Jar
    5. Java Version : 11
-# CICD
+# CI/CD
    1. Jenkins gitHub webHook
