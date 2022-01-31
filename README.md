@@ -13,4 +13,4 @@ Spring boot Practice
    4. Packaging : Jar
    5. Java Version : 11
 # CICD
-   1. Jenkins pipeLine
+   1. Jenkins git webhook
