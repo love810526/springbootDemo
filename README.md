@@ -14,3 +14,5 @@ Spring boot Practice
    5. Java Version : 11
 # CI/CD
    1. Jenkins gitHub webHook
+# API Document
+   1. OpenApi : 3.0.0
