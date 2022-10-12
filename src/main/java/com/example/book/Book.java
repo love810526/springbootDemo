@@ -12,7 +12,7 @@ public class Book {
     /*Entity : 建立資料庫的實體物件 */
     @Id
     @GeneratedValue
-    private Integer  bookid;
+    private Integer bookid;
     private String name;
     private String author;
 }

@@ -1,9 +1,28 @@
 package com.example.book;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.data.rest.core.annotation.RestResource;
 
-@Repository
-public interface  BookRepository extends JpaRepository<Book, Integer> {
-    /*建立操作資料物件的 Repository ==> 透過 Spring Data JPA 提供的功能, 我們不必真的寫一堆配置跟Dao物件就可以進行操作了 */
+@RepositoryRestResource
+public interface BookRepository extends JpaRepository<Book, Integer> {
+
+    // Prevents GET /books/:id
+//    @Override
+//    Book findOne(Integer id);
+
+    // Prevents GET /books
+    @Override
+    Page<Book> findAll(Pageable pageable);
+
+    // Prevents POST /books and PATCH /books/:id
+    @Override
+    Book save(Book s);
+
+    // Prevents DELETE /books/:id
+    @Override
+    @RestResource(exported = false)
+    void delete(Book t);
 }
